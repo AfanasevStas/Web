@@ -3,9 +3,20 @@ body {
     /*font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
     font-family: Roboto Condensed, 'Cambria Math';
     font-size: 22px;
-    font-style:italic;
+    /*font-style:italic;*/
 }
 p 
 {
     text-align:justify;
+    text-indent:48px;
+}
+figure 
+{
+    text-align:center;
+    font-style:italic;
+    font-weight:200;
+}
+h1, h2, h3, h4 
+{
+    text-align: center;
 }
