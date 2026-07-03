@@ -1,0 +1,26 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body 
+{
+    font-family: Roboto Condensed, 'Cambria Math';
+    font-size: 32px;
+    background-image: linear-gradient(to bottom right, lightskyblue, pink);
+    background-attachment: fixed;
+}
+table 
+{
+    border: solid 1px ;
+
+    border-color:antiquewhite;
+    margin-left: 25px;
+}
+tbody td {
+    border: solid 1px;
+    border: solid 1px;
+    padding: 10px 30px;
+    border-color: antiquewhite;
+}
+td 
+{
+    padding: 10px;
+}
