@@ -14,13 +14,9 @@ table
     border-color:antiquewhite;
     margin-left: 25px;
 }
-tbody td {
-    border: solid 1px;
+tbody td 
+{
     border: solid 1px;
     padding: 10px 30px;
     border-color: antiquewhite;
-}
-td 
-{
-    padding: 10px;
 }
