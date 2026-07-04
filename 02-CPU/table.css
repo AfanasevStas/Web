@@ -2,6 +2,15 @@
 {
     border:solid 5px;
     border-collapse:collapse;
+    margin: 32px auto;
+}
+table:hover 
+{
+    box-shadow: 0 0 50px 10px gray;
+}
+tr:hover 
+{
+    box-shadow: inset 0 -3px 10px 1px green;
 }
 thead 
 {
