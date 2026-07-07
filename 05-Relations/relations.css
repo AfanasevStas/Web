@@ -1,0 +1,31 @@
+﻿body
+{
+}
+/*.block > h2 {
+    background-color:forestgreen;
+}*/
+/*.block h2 {
+    background-color: forestgreen;
+}*/
+body > h2 {
+    background-color: forestgreen;
+}
+.frame, .next, .labuda 
+{
+    border: solid 1px;
+    width: 200px;
+    height: 150px;
+    margin: 32px auto;
+}
+/*.frame + .next {
+    background-color:darkolivegreen;
+}*/
+    .frame ~ .next {
+        background-color: darkolivegreen;
+    }
+/*.next {
+    border: solid 1px;
+    width: 200px;
+    height: 150px;
+    margin: 32px auto;
+}*/
