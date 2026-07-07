@@ -5,10 +5,10 @@ body
     background-image: linear-gradient(to bottom right, lightskyblue, pink);
     background-attachment: fixed;
 }
-table 
-{
+table {
     border: solid 1px;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 4px; 
     margin-left: 70px;
 }
 tbody td 
@@ -25,10 +25,11 @@ ol
     text-align: left;
     font-size: 20px;
 }
-td 
-{
+td {
     text-align: center;
     font-size: 10px;
+    position: relative;
+    z-index: 1;
 }
 li 
 {
@@ -39,6 +40,26 @@ li
 {
     background-color: aliceblue;
 }
+.white:hover 
+{
+    box-shadow: 1px 1px 5px 5px gray, -1px -1px 5px -5px gray;
+    background-color: aliceblue;
+
+}
+.white:hover ~ .white 
+{
+    box-shadow: 1px 1px 5px 5px gray, -1px -1px 5px -5px gray;
+    background-color: aliceblue;
+}
+.pink:hover {
+    box-shadow: 1px 1px 5px 5px hotpink, -1px -1px 5px -5px hotpink;
+    background-color: hotpink;
+}
+.pink:hover ~ .pink 
+{
+    box-shadow: 1px 1px 5px 5px hotpink, -1px -1px 5px -5px hotpink;
+    background-color: hotpink;
+}
 .pink 
 {
     background-color: hotpink;
@@ -47,11 +68,41 @@ li
 {
     background-color: coral;
 }
+.coral:hover 
+{
+    box-shadow: 1px 1px 5px 5px coral, -1px -1px 5px -5px coral;
+    background-color: coral;
+}
+.coral:hover ~ .coral 
+{
+    box-shadow: 1px 1px 5px 5px coral, -1px -1px 5px -5px coral;
+    background-color: coral;
+}
 .cadetblue 
 {
     background-color: cadetblue;
 }
+.cadetblue:hover 
+{
+    box-shadow: 1px 1px 5px 5px cadetblue, -1px -1px 5px -5px cadetblue;
+    background-color: cadetblue;
+}
+.cadetblue:hover ~ .cadetblue
+{
+    box-shadow: 1px 1px 5px 5px cadetblue, -1px -1px 5px -5px cadetblue;
+    background-color: cadetblue;
+}
 .olivedrab 
 {
+    background-color: olivedrab;
+}
+.olivedrab:hover 
+{
+    box-shadow: 1px 1px 5px 5px olivedrab, -1px -1px 5px -5px olivedrab;
+    background-color: olivedrab;
+}
+.olivedrab:hover ~ .olivedrab
+{
+    box-shadow: 1px 1px 5px 5px olivedrab, -1px -1px 5px -5px olivedrab;
     background-color: olivedrab;
 }
