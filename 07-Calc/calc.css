@@ -198,12 +198,6 @@
     /*grid-gap:8px;*/
     grid-row-gap:8px;
 }
-.clear-buttons 
-{
-    grid-row:1;
-    grid-column-start:2;
-    grid-column-end:7;
-}
 .square 
 {
     height:30px;
@@ -214,4 +208,15 @@
 {
     width:42px;
     height:30px;
+}
+.clear-buttons 
+{
+    grid-row:1;
+    grid-column-start:2;
+    grid-column-end:7;
+}
+.clear-buttons > button 
+{
+    width:79px;
+    margin-right:1px;
 }
