@@ -197,12 +197,14 @@
 
     /*grid-gap:8px;*/
     grid-row-gap:8px;
+    grid-column-gap:5px;
 }
 .square 
 {
-    height:30px;
-    width:30px;
-    border:solid 1px;
+    height:26px;
+    width:26px;
+    border:inset 2px;
+    margin-left:4px;
 }
 .calc-buttons button 
 {
@@ -217,6 +219,18 @@
 }
 .clear-buttons > button 
 {
-    width:79px;
+    width:78px;
     margin-right:1px;
+}
+.memory-button 
+{
+    margin:0px 7px 0px -2px;
+}
+.calc-buttons > button 
+{
+    color:blue;
+}
+.calc-buttons > .memory-button, .calc-buttons > .operation-button, .clear-buttons > button 
+{
+    color: red;
 }
