@@ -7,11 +7,105 @@
 </head>
 <body>
     <h1>JavaScript</h1>
+    <!--Пункт задания - 1-->
     <div>
         <label for="number-degree">Введите число:</label>
-        <input id="number-degree" type="number"/>
+        <input id="number-degree" type="number" />
         <label for="degree-number">Введите степень для числа:</label>
-        <input id="degree-number" type="number"/>
+        <input id="degree-number" type="number" />
+        <br /><button onclick="Degree()">Вычислить степень числа</button>
+        <div id="degree-result"></div>
     </div>
+    <br />
+    <!--Пункт задания - 2-->
+    <div>
+        <label for="number">Введите Предел Чила Фиббоначи:</label>
+        <input id="number" type="number" />
+        <br /><button onclick="Fibb()">Вычислить ряд Фиббоначи</button>
+        <div id="number-result"></div>
+    </div>
+    <!--Пункт задания - 3-->
+    <br />
+    <div>
+        <label for="number_2">Введите Предел Чила Фиббоначи:</label>
+        <input id="number_2" type="number" />
+        <label for="number_3">Введите Количество Чисел для ряда Фиббоначи:</label>
+        <input id="number_3" type="number" />
+        <br /><button onclick="Fibb_2()">Вычислить ряд Фиббоначи</button>
+        <div id="number-result_2"></div>
+    </div>
+    <!--Функция для задания - 1-->
+    <script>
+        function Degree() {
+            let number_degree_element = document.getElementById("number-degree");
+            let degree_number_element = document.getElementById("degree-number");
+            let number_degree = number_degree_element.value;
+            let degree_number = degree_number_element.value;
+            let result = 1;
+            for (let i = 0; i < degree_number; i++) {
+                result *= number_degree;
+            }
+            document.getElementById("degree-result").innerHTML = `Результат: ${result}`;
+        }
+    </script>
+    <!--Функция для задания - 2-->
+    <script>
+        function Fibb() {
+            let number_element = document.getElementById("number");
+            let number = number_element.value;
+            let result = 1;
+            let result_old_1 = 0;
+            let result_old_2 = 1;
+            document.getElementById("number-result").innerHTML = `0, `;
+            document.getElementById("number-result").innerHTML += `1, `;
+            while (result < number) {
+                result = result_old_1 + result_old_2;
+                if (result > number) {
+                    break;
+                }
+                document.getElementById("number-result").innerHTML += `${result}, `;
+                result_old_1 = result_old_2;
+                result_old_2 = result;
+            }
+        }
+    </script>
+    <!--Функция для задания - 3-->
+    <script>
+        function Fibb_2() {
+            let number_element_2 = document.getElementById("number_2");
+            let number_2 = number_element_2.value;
+            let number_element_3 = document.getElementById("number_3");
+            let number_3 = parseInt(number_element_3.value,10);
+            let result = 1;
+            let result_old_1 = 0;
+            let result_old_2 = 1;
+            let check = parseInt(0, 10);
+            if (number_3 >= 2)
+            {
+                document.getElementById("number-result_2").innerHTML = `0, `;
+                document.getElementById("number-result_2").innerHTML += `1, `;
+                check += 2;
+            }
+            else if (number_3 == 1)
+            {
+                document.getElementById("number-result_2").innerHTML = `0, `;
+            }
+            while (result < number_2)
+            {
+                result = result_old_1 + result_old_2;
+                if (result > number_2)
+                {
+                    break;
+                }
+                if (check < number_3)
+                {
+                    document.getElementById("number-result_2").innerHTML += `${result}, `;
+                }
+                result_old_1 = result_old_2;
+                result_old_2 = result;
+                check++;
+            }
+        }
+    </script>
 </body>
 </html>
