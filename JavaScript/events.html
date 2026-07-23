@@ -15,15 +15,9 @@
     <script>
         function SetImage()
         {
-            //let filename = document.getElementById("image-file");
-            //let file = filename.files[0];
-            //document.getElementById("image").src = URL.createObjectURL(file);
-            let reader = new FileReader();
-            reader.onload = function (e)
-            {
-                document.getElementById("image").src = e.target.result;
-            }
-            reader.readAsDataURL(filename.files[0]);
+            let filename = document.getElementById("image-file");
+            let file = filename.files[0];
+            document.getElementById("image").src = URL.createObjectURL(file);
         }
     </script>
 </body>

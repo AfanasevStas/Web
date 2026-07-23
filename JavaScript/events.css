@@ -1,7 +1,7 @@
 ﻿body
 {
 }
-.image-container 
+.image-container, img 
 {
     border: solid 1px;
     width: 400px;
