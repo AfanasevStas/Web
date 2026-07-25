@@ -6,7 +6,14 @@
     <link rel="stylesheet" href="events.css" />
     <title>JavaScript Events</title>
 </head>
-<body>
+<body class="light">
+    <div class="header">
+        <h3>Header</h3>
+        <h3 id="mouse-coords"></h3>
+        <div id="switch-background"></div>
+        <!--<img src="moon.png" id="switch-background"/>-->
+    </div>
+    <h1 id="mouse-coords"></h1>
     <h1>JavaScript Events</h1>
     <div class="images-and-colors">
         <div class="load-image">
@@ -46,6 +53,19 @@
             //    document.body.style.backgroundColor = e.target.value;
             //else
             //    document.body.style.color = e.target.value;
+        }
+        document.addEventListener("mousemove", treckMouse);
+        function treckMouse(e)
+        {
+            let coords =    `Mouse: X = ${e.clientX}, Y = ${e.clientY}`;
+            document.getElementById("mouse-coords").innerHTML = coords;
+            console.log(coords);
+        }
+        document.getElementById("switch-background").addEventListener("click", switchBackground);
+        function switchBackground(e)
+        {
+            //e.target.src = (e.target.src.includes('moon.png') ? 'sun.png' : 'moon.png');
+            document.body.className = document.body.className === 'dark' ? 'light' : 'dark';
         }
     </script>
 </body>
