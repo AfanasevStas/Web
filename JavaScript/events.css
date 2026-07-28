@@ -1,6 +1,10 @@
-﻿body
+﻿:root 
 {
-    transition: background-color 3s, color 3s;
+    --transition-all: 3s;
+}
+body 
+{
+    transition: background-color var(--transition-al), color var(--transition-al);
 }
 .header 
 {
@@ -14,14 +18,21 @@
     height:32px;
 }
 /*//////////////////////////////////////////*/
+#Input-transition 
+{
+    width: 32px;
+    height: 32px;
+    background-size: 32px 32px;
+}
 #switch-background 
 {
-    width:32px;
-    height:32px;
-    background-size:32px 32px;
-    transition: 3s; 
+    width: 32px;
+    height: 32px;
+    background-size: 32px 32px;
+    transition: var(--transition-al);
 }
-.dark {
+.dark 
+{
     background-color: #323232;
     color: white;
 }

@@ -11,6 +11,8 @@
         <h3>Header</h3>
         <h3 id="mouse-coords"></h3>
         <div id="switch-background"></div>
+        <label for="Input-transition">Введите скорость анимации в сек.:</label>
+        <input type="number" id="Input-transition" value="3" step="0.1" min="0.1">
         <!--<img src="moon.png" id="switch-background"/>-->
     </div>
     <h1 id="mouse-coords"></h1>
@@ -61,6 +63,16 @@
             document.getElementById("mouse-coords").innerHTML = coords;
             console.log(coords);
         }
+
+        let input = document.getElementById('Input-transition');
+        input.addEventListener
+            ('input', function (e)
+                {
+                    let value = e.target.value;
+                    document.documentElement.style.setProperty('--transition-al', `${value}s`);
+                }
+            );
+
         document.getElementById("switch-background").addEventListener("click", switchBackground);
         function switchBackground(e)
         {
