@@ -15,58 +15,47 @@
     </div>
     <h1 id="mouse-coords"></h1>
     <h1>JavaScript Events</h1>
-    <div class="images-and-colors">
-        <div class="load-image">
-            <div class="image-container"><img alt="Фото студента" id="image" /></div>
-            <input type="file" id="image-file" onchange="setImage()">
-        </div>
-        <div class="colors">
-            <div>
-                <label for="background-color">Выберите цвет фона:</label>
-                <input type="color" id="background-color" oninput="setColor(event)"/>
+    <details>
+    <summary>Картинки и цвета</summary> 
+        <div class="images-and-colors">
+            <div class="load-image">
+                <div class="image-container"><img alt="Фото студента" id="image" /></div>
+                <input type="file" id="image-file" onchange="setImage()">
             </div>
-            <div>
-                <label for="foreground-color">Выберите цвет текста:</label>
-                <input type="color" id="foreground-color"  oninput="setColor(event)"/>
+            <div class="colors">
+                <div>
+                    <label for="background-color">Выберите цвет фона:</label>
+                    <input type="color" id="background-color" oninput="setColor(event)" />
+                </div>
+                <div>
+                    <label for="foreground-color">Выберите цвет текста:</label>
+                    <input type="color" id="foreground-color" oninput="setColor(event)" />
+                </div>
             </div>
         </div>
-    </div>
-    <script>
-        function setImage()
-        {
-            let filename = document.getElementById("image-file");
-            let file = filename.files[0];
-            document.getElementById("image").src = URL.createObjectURL(file);
-        }
-        function setBackgroundColor()
-        {
-            document.body.style.backgroundColor = document.getElementById("background-color").value;
-        }
-        function setForegroundColor(e)
-        {
-            document.body.style.color = e.target.value;
-        }
-        function setColor(e)
-        {
-            document.body.style[e.target.id === "background-color" ? "background-color" : "color"] = e.target.value;
-            //if (e.target.id === "background-color")
-            //    document.body.style.backgroundColor = e.target.value;
-            //else
-            //    document.body.style.color = e.target.value;
-        }
-        document.addEventListener("mousemove", treckMouse);
-        function treckMouse(e)
-        {
-            let coords =    `Mouse: X = ${e.clientX}, Y = ${e.clientY}`;
-            document.getElementById("mouse-coords").innerHTML = coords;
-            console.log(coords);
-        }
-        document.getElementById("switch-background").addEventListener("click", switchBackground);
-        function switchBackground(e)
-        {
-            //e.target.src = (e.target.src.includes('moon.png') ? 'sun.png' : 'moon.png');
-            document.body.className = document.body.className === 'dark' ? 'light' : 'dark';
-        }
+    </details>    
+
+    <h2 id="full-time"></h2>
+
+    <div id="clock">
+        <div id="current-time">
+            <span id="hours"></span>:
+            <span id="minutes"></span>:
+            <span id="seconds"></span>
+        </div>
+        <div id="current-date">
+            <span id="years"></span>.
+            <span id="mounts"></span>.
+            <span id="days"></span>
+        </div>
+        <div id="day-of-week"></div>
+		<div id="clock-controls">
+			<input type="checkbox" id="show-date" /><label for="show-date">Показать дату</label>
+			<input type="checkbox" id="show-weekday" /><label for="show-weekday">Показать день недели</label>
+		</div>    </div>
+
+    <script src="events.js">
+
     </script>
 </body>
 </html>
