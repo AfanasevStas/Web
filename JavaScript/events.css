@@ -1,4 +1,9 @@
-﻿body
+﻿@font-face 
+{
+    font-family: Digital-7 Mono;
+    src: url('http://localhost:62984/digital-7 (mono).ttf');
+}
+body
 {
     transition: background-color 3s, color 3s;
 }
@@ -60,6 +65,7 @@
 
 #clock 
 {
+    font-family:Digital-7 Mono;
     font-size:48px;
     text-align:center;
 }
